@@ -1,0 +1,825 @@
+
+/* =========================================
+   MENGENAL HEWAN - AESTHETIC CSS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #24324a;
+  background:
+    radial-gradient(circle at top left, #dff6ff 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #e8ddff 0%, transparent 35%),
+    linear-gradient(135deg, #f7fbff, #eef5ff);
+  min-height: 100vh;
+  line-height: 1.7;
+  transition: background 0.4s, color 0.4s;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+#judul {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 45px 20px 30px;
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(35, 164, 255, 0.95),
+      rgba(117, 76, 255, 0.95)
+    );
+
+  box-shadow: 0 10px 35px rgba(72, 91, 170, 0.25);
+}
+
+/* dekorasi lingkaran */
+#judul::before,
+#judul::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#judul::before {
+  width: 220px;
+  height: 220px;
+  top: -120px;
+  left: -60px;
+}
+
+#judul::after {
+  width: 300px;
+  height: 300px;
+  right: -100px;
+  bottom: -180px;
+}
+
+#judul h1 {
+  position: relative;
+  z-index: 2;
+
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  margin-bottom: 25px;
+
+  background: transparent;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   NAVIGASI
+========================================= */
+
+#navigasi {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#navigasi a {
+  color: white;
+  text-decoration: none;
+
+  padding: 9px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+#navigasi a:hover {
+  background: white;
+  color: #6955e8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   TOMBOL MODE GELAP
+========================================= */
+
+#tombol-gelap {
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  background: white;
+  color: #635bdb;
+
+  font-family: inherit;
+  font-weight: 600;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.3s ease;
+}
+
+#tombol-gelap:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+  width: min(1100px, 92%);
+  margin: 45px auto;
+}
+
+
+/* =========================================
+   SECTION & ASIDE
+========================================= */
+
+section,
+aside {
+  margin-bottom: 30px;
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 15px 40px rgba(54, 83, 140, 0.10);
+
+  transition: all 0.3s ease;
+}
+
+section:hover,
+aside:hover {
+  box-shadow:
+    0 20px 50px rgba(54, 83, 140, 0.15);
+}
+
+
+/* =========================================
+   JUDUL
+========================================= */
+
+h2 {
+  position: relative;
+
+  color: #4354c7;
+  font-size: 25px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+  padding-left: 16px;
+}
+
+h2::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 5px;
+
+  width: 5px;
+  height: 28px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    #23a4ff,
+    #7654f6
+  );
+}
+
+h3 {
+  color: #3949ab;
+  font-size: 22px;
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+#cari {
+  width: 100%;
+
+  padding: 15px 20px;
+  margin-bottom: 25px;
+
+  border: 2px solid transparent;
+  border-radius: 15px;
+
+  outline: none;
+
+  background: white;
+
+  color: #24324a;
+  font-family: inherit;
+  font-size: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(68, 87, 150, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+#cari::placeholder {
+  color: #9aa5b5;
+}
+
+#cari:focus {
+  border-color: #6b63e8;
+
+  box-shadow:
+    0 8px 30px rgba(103, 88, 230, 0.18);
+}
+
+
+/* =========================================
+   ARTICLE CARD
+========================================= */
+
+article {
+  position: relative;
+
+  padding: 24px;
+  margin-bottom: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid #edf0f7;
+
+  box-shadow:
+    0 8px 25px rgba(49, 68, 115, 0.08);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+article::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #23a4ff,
+      #7654f6,
+      #d85cff
+    );
+}
+
+article:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(49, 68, 115, 0.15);
+}
+
+
+/* =========================================
+   GAMBAR
+========================================= */
+
+figure {
+  margin-bottom: 20px;
+}
+
+figure img {
+  display: block;
+
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+
+  margin: auto;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 30px rgba(35, 61, 110, 0.18);
+
+  transition: all 0.4s ease;
+}
+
+figure img:hover {
+  transform: scale(1.025);
+
+  box-shadow:
+    0 18px 40px rgba(35, 61, 110, 0.25);
+}
+
+figcaption {
+  max-width: 600px;
+
+  margin: 12px auto 0;
+
+  text-align: center;
+
+  color: #8490a5;
+
+  font-size: 13px;
+  font-style: italic;
+}
+
+
+/* =========================================
+   PARAGRAPH
+========================================= */
+
+article p {
+  color: #59677d;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   AKSI
+========================================= */
+
+.aksi {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 20px;
+  padding-top: 18px;
+
+  border-top: 1px solid #edf0f5;
+}
+
+.aksi button {
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 17px;
+
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Tombol suka */
+
+.btn-suka {
+  color: #ef4f70;
+
+  background: #fff0f4;
+
+  border: 1px solid #ffd7e1 !important;
+}
+
+.btn-suka:hover {
+  color: white;
+
+  background: #ef4f70;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 18px rgba(239, 79, 112, 0.25);
+}
+
+
+/* Tombol baca */
+
+.btn-baca {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #23a4ff,
+      #6955e8
+    );
+
+  box-shadow:
+    0 6px 15px rgba(78, 93, 220, 0.2);
+}
+
+.btn-baca:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(78, 93, 220, 0.3);
+}
+
+.jumlah-suka {
+  color: #ef4f70;
+}
+
+
+/* =========================================
+   BACA SELENGKAPNYA
+========================================= */
+
+.sembunyi {
+  display: none;
+}
+
+.selengkapnya {
+  padding: 15px 18px;
+
+  border-radius: 14px;
+
+  color: #536078;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef9ff,
+      #f3efff
+    );
+
+  border-left: 4px solid #6955e8;
+}
+
+
+/* =========================================
+   ASIDE
+========================================= */
+
+aside {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.85),
+      rgba(241,246,255,0.9)
+    );
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  margin-bottom: 12px;
+}
+
+aside a {
+  display: block;
+
+  padding: 11px 15px;
+
+  border-radius: 12px;
+
+  color: #5361c9;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  background: rgba(105, 85, 232, 0.06);
+
+  transition: all 0.3s ease;
+}
+
+aside a:hover {
+  padding-left: 22px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #23a4ff,
+      #6955e8
+    );
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TENTANG
+========================================= */
+
+.wrapper {
+  padding: 20px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edfaff,
+      #f3efff
+    );
+
+  border: 1px solid #e5e9ff;
+
+  margin-bottom: 18px;
+}
+
+#Tentang p {
+  color: #5c697d;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  position: relative;
+  overflow: hidden;
+
+  text-align: center;
+
+  padding: 45px 20px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #202b4a,
+      #3c3270
+    );
+
+  box-shadow:
+    0 -10px 30px rgba(55, 62, 110, 0.15);
+}
+
+footer h2 {
+  color: white;
+  padding-left: 0;
+}
+
+footer h2::before {
+  display: none;
+}
+
+.alamat {
+  font-style: normal;
+
+  color: #d6dcf0;
+
+  font-size: 14px;
+
+  line-height: 2;
+}
+
+.alamat a {
+  color: #7ddcff;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.alamat a:hover {
+  color: white;
+}
+
+footer p {
+  margin-top: 20px;
+
+  color: #aeb8d2;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   MODE GELAP
+========================================= */
+
+body.dark {
+  color: #e9ecf5;
+
+  background:
+    radial-gradient(circle at top left, #182b43, transparent 35%),
+    radial-gradient(circle at bottom right, #271b46, transparent 35%),
+    #0e1320;
+}
+
+body.dark #judul {
+  background:
+    linear-gradient(
+      135deg,
+      #162f4b,
+      #38285f
+    );
+}
+
+body.dark section,
+body.dark aside {
+  background: rgba(25, 30, 45, 0.82);
+
+  border-color: rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.25);
+}
+
+body.dark article {
+  background: #1b2130;
+
+  border-color: #2c3448;
+}
+
+body.dark h2 {
+  color: #8ea8ff;
+}
+
+body.dark h3 {
+  color: #8edbff;
+}
+
+body.dark article p,
+body.dark #Tentang p {
+  color: #b7c0d2;
+}
+
+body.dark figcaption {
+  color: #8792a8;
+}
+
+body.dark #cari {
+  color: white;
+  background: #202738;
+
+  border-color: #30394d;
+}
+
+body.dark #cari::placeholder {
+  color: #778196;
+}
+
+body.dark .selengkapnya {
+  color: #c0c9da;
+
+  background:
+    linear-gradient(
+      135deg,
+      #202d40,
+      #29233f
+    );
+}
+
+body.dark .wrapper {
+  background:
+    linear-gradient(
+      135deg,
+      #202d40,
+      #29233f
+    );
+
+  border-color: #343d58;
+}
+
+body.dark aside {
+  background: #1a2030;
+}
+
+body.dark aside a {
+  color: #aebaff;
+
+  background: rgba(120, 130, 255, 0.08);
+}
+
+body.dark .aksi {
+  border-top-color: #303749;
+}
+
+body.dark #tombol-gelap {
+  color: white;
+  background: #252d40;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  #judul {
+    padding: 35px 15px 25px;
+  }
+
+  #judul h1 {
+    font-size: 29px;
+  }
+
+  #navigasi {
+    flex-direction: column;
+  }
+
+  #navigasi a,
+  #tombol-gelap {
+    width: 220px;
+  }
+
+  main {
+    width: 94%;
+    margin: 25px auto;
+  }
+
+  section,
+  aside {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  article {
+    padding: 18px;
+  }
+
+  figure img {
+    max-width: 100%;
+  }
+
+  .aksi {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .aksi button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   ANIMASI
+========================================= */
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main > * {
+  animation: muncul 0.7s ease both;
+}
+
